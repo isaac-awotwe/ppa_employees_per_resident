@@ -20,5 +20,5 @@ Two data series are used, both from Ststistics Canada:
 **5. The annual employee headcount for a calendar year is an average of monthly headcounts in that calendar year**
 
 ### Population Data
-1. Population data are based on quarterly estimates by Statistics Canada (Table: 17-10-0009-01 (formerly CANSIM 051-0005) Population Estimates, Quarterly)
+1. Population data are based on quarterly estimates by Statistics Canada ([Table: 17-10-0009-01 (formerly CANSIM 051-0005) Population Estimates, Quarterly](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000901))
 2. Data pulled in October 2023 and so represents the most current numbers
