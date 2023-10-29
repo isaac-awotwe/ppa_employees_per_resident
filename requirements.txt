@@ -152,9 +152,9 @@ python-lsp-server==1.7.4
 python-slugify==8.0.1
 pytoolconfig==1.2.6
 pytz @ file:///C:/b/abs_19q3ljkez4/croot/pytz_1695131651401/work
-pywin32==305.1
-pywin32-ctypes==0.2.2
-pywinpty @ file:///C:/b/abs_73vshmevwq/croot/pywinpty_1677609966356/work/target/wheels/pywinpty-2.0.10-cp38-none-win_amd64.whl
+#pywin32==305.1
+#pywin32-ctypes==0.2.2
+#pywinpty @ file:///C:/b/abs_73vshmevwq/croot/pywinpty_1677609966356/work/target/wheels/pywinpty-2.0.10-cp38-none-win_amd64.whl
 PyYAML @ file:///C:/b/abs_782o3mbw7z/croot/pyyaml_1698096085010/work
 pyzmq @ file:///C:/ci/pyzmq_1657616005830/work
 QDarkStyle==3.1
