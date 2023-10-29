@@ -110,3 +110,14 @@ def empl_pop_ratio(
     ratio_dict=dict(chain.from_iterable(d.items() for d in (years_dict, geo_dict)))
     ratio_df=pd.DataFrame(ratio_dict)
     return ratio_dict
+
+
+def wide_to_long(
+    df:pd.DataFrame,
+    id_vars:str,
+    var_name='geo',
+    value_name='count')->pd.DataFrame:
+    """
+    """
+    melted_df=df.melt(id_vars=id_vars, var_name=var_name, value_name=value_name)
+    return melted_df
