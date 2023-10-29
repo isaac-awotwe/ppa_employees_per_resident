@@ -110,8 +110,17 @@
                   "SYMBOL", "TERMINATED",
                   "DECIMALS"],
     "empl_data_id":"14-10-0202-01",
-    "pop_data_id":
+    "pop_data_id":"17-10-0009-01",
     "focus_years":[*range(2001,2023)],
+    
+    "st_default_years":[*range(2018,2023)],
+    
+    "st_default_geo":["Alberta",
+    'British Columbia',
+    'Manitoba',
+    'Ontario',
+    'Quebec',
+    'Saskatchewan']
     
     "focus_geo":['Canada',
     'Newfoundland and Labrador',
