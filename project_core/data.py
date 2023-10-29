@@ -3,19 +3,16 @@ import pandas as pd
 import numpy as np
 import copy
 from stats_can import StatsCan
-
+from utils import load_config
+from itertools import chain
+config=load_config("config.json")
 
 
 def retrieve_data(
     table_id:str, 
-    date_col_name = 'REF_DATE',
+    date_col_name = config["date_col_name"]
     date_to_year = False,
-    drop_cols = ["DGUID", "UOM",
-                  "UOM_ID", "SCALAR_FACTOR",
-                  "SCALAR_ID", "VECTOR",
-                  "COORDINATE", "STATUS",
-                  "SYMBOL", "TERMINATED",
-                  "DECIMALS"])->pd.DataFrame:
+    drop_cols=config["drop_cols"])->pd.DataFrame:
     """
     Pulls a data table from the Statistics Canada (StatsCan) website and removes some extra columns.
     
@@ -29,12 +26,12 @@ def retrieve_data(
      To keep all columns, enter and empty list
     :return: a DataFrame
     """
+
     sc = StatsCan()
     sc.update_tables()
     table_df = sc.table_to_df(table = table_id)
     if date_to_year == True:
         table_df['REF_YEAR'] = table_df[date_col_name].dt.year
-        table_df.drop(date_col_name, axis=1, inplace=True)
     table_df.drop(drop_cols, axis=1, inplace=True)
     return table_df
         
@@ -57,9 +54,9 @@ def filter_data(df:pd.DataFrame,
 
 def pivot(
     df:pd.DataFrame,
-    idx:str,
-    col:str,
-    val:str)->pd.DataFrame:
+    idx=config["pivot_index"],
+    col=config["pivot_column"],
+    val=config["pivot_value"])->pd.DataFrame:
     """
     pivots a dataframe from long to wide
     df
@@ -77,10 +74,10 @@ def pivot(
 
 def pivot_table(
     df:pd.DataFrame,
-    idx:str,
-    col:str,
-    val:str,
-    func='mean')->pd.DataFrame:
+    idx=config["pivot_index"],
+    col=config["pivot_column"],
+    val=config["pivot_value"],
+    func=config["pivot_func"])->pd.DataFrame:
     """
     pivots a dataframe from long to wide
     df
@@ -96,3 +93,20 @@ def pivot_table(
                               aggfunc=func).reset_index()
     pivot_df.columns.name=None
     return pivot_df
+
+
+def empl_pop_ratio(
+    empl_df:pd.DataFrame,
+    pop_df:pd.DataFrame,
+    years=config["focus_years"],
+    geo=config["focus_geo"])->pd.DataFrame
+    """
+    Calculates the number of employees per 1000 employees.
+    
+    """
+    years_dict={"REF_YEAR":years}
+    sorted_geo=sorted(geo)
+    geo_dict={prov:empl_df[prov].values/pop_df[prov].values*1000 for prov in sorted_geo}
+    ratio_dict=dict(chain.from_iterable(d.items() for d in (years_dict, geo_dict)))
+    ratio_df=pd.DataFrame(ratio_dict)
+    return ratio_dict
