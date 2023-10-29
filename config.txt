@@ -109,6 +109,8 @@
                   "COORDINATE", "STATUS",
                   "SYMBOL", "TERMINATED",
                   "DECIMALS"],
+    "empl_data_id":"14-10-0202-01",
+    "pop_data_id":
     "focus_years":[*range(2001,2023)],
     
     "focus_geo":['Canada',
