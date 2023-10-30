@@ -10,7 +10,7 @@ import copy
 from stats_can import StatsCan
 from utils import load_config
 from itertools import chain
-from project_core.data import retrieve_data, filter_data, pivot, pivot_table, empl_pop_ratio, wide_to_long
+from data_work import retrieve_data, filter_data, pivot, pivot_table, empl_pop_ratio, wide_to_long
 config=load_config("config.json")
 
 # data
