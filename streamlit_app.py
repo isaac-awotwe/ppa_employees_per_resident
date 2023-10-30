@@ -79,7 +79,7 @@ if add_sidebar=="Alberta Only":
     
 if add_sidebar=="All Provinces":
     st.subheader("Pleasae filter here:")
-    col1, col2 = st.columns(2):
+    col1, col2 = st.columns(2)
     with col1:
         years_filter=st.multiselect(
             "Select the years to include:",
