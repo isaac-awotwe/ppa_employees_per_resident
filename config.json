@@ -1,0 +1,76 @@
+{
+    "drop_cols": ["DGUID", "UOM",
+                  "UOM_ID", "SCALAR_FACTOR",
+                  "SCALAR_ID", "VECTOR",
+                  "COORDINATE", "STATUS",
+                  "SYMBOL", "TERMINATED",
+                  "DECIMALS"],
+    "empl_data_id":"14-10-0202-01",
+    "pop_data_id":"17-10-0009-01",
+    "focus_years":[*range(2001,2023)],
+    
+    "st_default_years":[*range(2018,2023)],
+    
+    "st_default_geo":["Alberta",
+    'British Columbia',
+    'Manitoba',
+    'Ontario',
+    'Quebec',
+    'Saskatchewan'],
+    
+    "focus_geo":['Canada',
+    'Newfoundland and Labrador',
+    'Prince Edward Island',
+    'Nova Scotia',
+    'New Brunswick',
+    'Quebec',
+    'Ontario',
+    'Manitoba',
+    'Saskatchewan',
+    'Alberta',
+    'British Columbia'],
+    
+    "pivot_func":"mean",
+    "pivot_value":"VALUE",
+    "pivot_column":"GEO",
+    "pivot_index": "REF_YEAR",
+    "date_col_name": 'REF_DATE',
+    "ppa_empl_filter": {
+        "Type of employee": [
+            "All employees"
+        ],
+        "North American Industry Classification System (NAICS)": [
+            'Provincial and territorial public administration [912]'
+        ],
+        "REF_YEAR": [
+            *range(2001,2023)
+        ],
+        "GEO": [
+            'Canada',
+            'Newfoundland and Labrador',
+            'Prince Edward Island',
+            'Nova Scotia',
+            'New Brunswick',
+            'Quebec',
+            'Ontario',
+            'Manitoba',
+            'Saskatchewan',
+            'Alberta',
+            'British Columbia' 
+        ]
+    },
+    "pop_filter": {
+        "REF_YEAR": [*range(2001,2023)],
+        "GEO": ['Canada',
+        'Newfoundland and Labrador',
+        'Prince Edward Island',
+        'Nova Scotia',
+        'New Brunswick',
+        'Quebec',
+        'Ontario',
+        'Manitoba',
+        'Saskatchewan',
+        'Alberta',
+        'British Columbia']
+    }
+}
