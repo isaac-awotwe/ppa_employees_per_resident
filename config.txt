@@ -16,19 +16,16 @@
     'Manitoba',
     'Ontario',
     'Quebec',
-    'Saskatchewan']
+    'Saskatchewan'],
     
-    "focus_geo":['Canada',
-    'Newfoundland and Labrador',
-    'Prince Edward Island',
-    'Nova Scotia',
+    "focus_geo":['Alberta',
+    'British Columbia',
+    'Canada', 'Manitoba',
     'New Brunswick',
-    'Quebec',
-    'Ontario',
-    'Manitoba',
-    'Saskatchewan',
-    'Alberta',
-    'British Columbia'],
+    'Newfoundland and Labrador',
+    'Nova Scotia', 'Ontario',
+    'Prince Edward Island', 'Quebec',
+    'Saskatchewan'],
     
     "pivot_func":"mean",
     "pivot_value":"VALUE",
@@ -45,32 +42,26 @@
         "REF_YEAR": [
             *range(2001,2023)
         ],
-        "GEO": [
-            'Canada',
-            'Newfoundland and Labrador',
-            'Prince Edward Island',
-            'Nova Scotia',
-            'New Brunswick',
-            'Quebec',
-            'Ontario',
-            'Manitoba',
-            'Saskatchewan',
-            'Alberta',
-            'British Columbia' 
-        ]
+        "GEO": ['Alberta',
+        'British Columbia',
+        'Canada', 'Manitoba',
+        'New Brunswick',
+        'Newfoundland and Labrador',
+        'Nova Scotia', 'Ontario',
+        'Prince Edward Island',
+        'Quebec',
+        'Saskatchewan']
     },
     "pop_filter": {
         "REF_YEAR": [*range(2001,2023)],
-        "GEO": ['Canada',
-        'Newfoundland and Labrador',
-        'Prince Edward Island',
-        'Nova Scotia',
+        "GEO": ['Alberta',
+        'British Columbia',
+        'Canada', 'Manitoba',
         'New Brunswick',
+        'Newfoundland and Labrador',
+        'Nova Scotia', 'Ontario',
+        'Prince Edward Island',
         'Quebec',
-        'Ontario',
-        'Manitoba',
-        'Saskatchewan',
-        'Alberta',
-        'British Columbia']
+        'Saskatchewan']
     }
 }
